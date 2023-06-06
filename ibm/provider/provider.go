@@ -609,7 +609,7 @@ func Provider() *schema.Provider {
 			"ibm_dns_custom_resolvers":                 dnsservices.DataSourceIBMPrivateDNSCustomResolver(),
 			"ibm_dns_custom_resolver_forwarding_rules": dnsservices.DataSourceIBMPrivateDNSForwardingRules(),
 			"ibm_dns_custom_resolver_secondary_zones":  dnsservices.DataSourceIBMPrivateDNSSecondaryZones(),
-			"ibm_dns_linked_zone":                      dnsservices.DataSourceIBMDNSLinkedZone(),
+			"ibm_dns_linked_zones":                     dnsservices.DataSourceIBMDNSLinkedZones(),
 
 			// // Added for Direct Link
 

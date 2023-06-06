@@ -6,9 +6,9 @@ package dnsservices
 import (
 	"context"
 	"fmt"
-	"strings"
-
 	"github.com/IBM-Cloud/terraform-provider-ibm/ibm/conns"
+	"log"
+	"strings"
 	//"github.com/IBM-Cloud/terraform-provider-ibm/ibm/flex"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
@@ -154,6 +154,7 @@ func resourceIBMDNSLinkedZoneRead(ctx context.Context, d *schema.ResourceData, m
 
 	d.Set(DnsLinkedZoneInstanceID, idSet[0])
 	d.Set(DnsLinkedZoneDescription, *resource.Description)
+	log.Printf("[DEBUG] DNS Linked zone description: %s", *resource.Description)
 	d.Set(DnsLinkedZoneLabel, *resource.Label)
 	d.Set(DnsLinkedZoneCreatedOn, resource.CreatedOn)
 	d.Set(DnsLinkedZoneModifiedOn, resource.ModifiedOn)
